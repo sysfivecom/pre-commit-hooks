@@ -5,7 +5,7 @@
 # Usage: 
 #    $> cd /path/to/repository
 #    $> git-crypt init
-#    $> curl <url/to/this/gist> -o .git/hooks/pre-commit
+#    $> curl <url/to/this/raw/gist> -o .git/hooks/pre-commit
 #    $> chmod +x .git/hooks/pre-commit
 #
 
