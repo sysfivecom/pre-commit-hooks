@@ -9,8 +9,10 @@
 #    $> chmod +x .git/hooks/pre-commit
 #
 
-test -d .git-crypt && git-crypt status &>/dev/null
-if [[ $? -ne 0  ]]; then
-  git-crypt status -e
-  exit 1
+if [ -d .git-crypt ]; then
+    git-crypt status &>/dev/null
+    if [[ $? -ne 0  ]]; then
+        git-crypt status -e
+        exit 1
+    fi
 fi
