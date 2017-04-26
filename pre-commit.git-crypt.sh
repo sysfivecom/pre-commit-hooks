@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # Pre-commit hook to avoid accidentally adding unencrypted files with [git-crypt](https://www.agwa.name/projects/git-crypt/)
 # Fix to [Issue #45](https://github.com/AGWA/git-crypt/issues/45)
