@@ -21,7 +21,7 @@ STAGED_FILES=$(git diff --cached --name-status | awk '$1 != "D" { print $2 }' | 
 if [ -d .git-crypt ]; then
     git-crypt status ${STAGED_FILES} &>/dev/null
     if [[ $? -ne 0  ]]; then
-        git-crypt status -e
+        git-crypt status -e ${STAGED_FILES}
         exit 1
     fi
 fi
