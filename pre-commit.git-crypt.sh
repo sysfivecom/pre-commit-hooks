@@ -15,8 +15,11 @@
 #    $> cd .git/hooks
 #    $> ln -s ../../config/hooks/pre-commit.git-crypt/pre-commit.git-crypt.sh pre-commit
 #
+
+STAGED_FILES=$(git diff --cached --name-status | awk '$1 != "D" { print $2 }' | xargs echo)
+
 if [ -d .git-crypt ]; then
-    git-crypt status &>/dev/null
+    git-crypt status ${STAGED_FILES} &>/dev/null
     if [[ $? -ne 0  ]]; then
         git-crypt status -e
         exit 1
