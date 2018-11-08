@@ -21,6 +21,11 @@ if [ -d .git-crypt ]; then
     git-crypt status ${STAGED_FILES} &>/dev/null
     if [[ $? -ne 0  ]]; then
         git-crypt status -e ${STAGED_FILES}
+        echo '/!\ You should have first unlocked your repository BEFORE staging the above file(s)'
+        echo '/!\ Proceed now as follows:'
+        echo -e "\t git unstage ${STAGED_FILES}"
+        echo -e "\t git crypt unlock"
+        echo -e "\t git add ${STAGED_FILES}"
         exit 1
     fi
 fi
