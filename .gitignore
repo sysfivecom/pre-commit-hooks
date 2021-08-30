@@ -1,0 +1,21 @@
+# Ansible retry files
+*.retry
+
+# Editor backup files
+*.sw?
+*~
+.\#*
+\#*\#
+
+# Vagrant
+.vagrant
+
+# Python
+*.pyc
+.mypy_cache
+
+# gems
+.vendor/*
+
+# spec
+spec/reports*
