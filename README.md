@@ -12,7 +12,7 @@ Checks that are not yet released elsewhere:
 
 Add to your `.pre-commit-config.yaml`:
 
-    - repo: https://review.sysfive.com/tools/pre-commit-hooks
+    - repo: https://github.com/sysfivecom/pre-commit-hooks
       rev: 0.1.0
       hooks:
         - id: git-crypt-check
