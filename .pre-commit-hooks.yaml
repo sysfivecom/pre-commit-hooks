@@ -1,6 +1,6 @@
 - id: git-crypt-check
   name: Check git-crypt setup
   description: This hook checks correct use of git-crypt
-  entry: git-crypt-check
+  entry: pre-commit-hooks/git-crypt-check
   language: script
   types: [yaml]
